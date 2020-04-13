@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+<div class="container">
+  <div class="card" style="margin-top: 20px; box-shadow: 10px 10px 5px grey;">
+    <div class="card-body">
+      <h3>Task List</h3>
+      <form id="task-form">
+        <div class="form-group">
+          <input id = "task-input" type="text" class="form-control" placeholder="Enter a Task">
+        </div>
+          <input type="submit" class="btn btn-primary" style="margin-left: 20px; width:20%">
+      </form>
+      <div>
+        <div class="mt-4">
+          <h3>Filter Tasks</h3>
+          <hr>
+          <input type="text" id="filterTasks" class="col-sm-12" placeholder="Filter Tasks" style="border-radius: 4px; border-color:black;">
+        </div>
+        <h4 style="margin-top: 20px;">Added Task List</h4>
+        <hr>
+        <ul id = "task-list" style="margin-top: 20px;">
+        </ul>
+        <button id = "clear-tasks" class="btn btn-dark" style="margin-top: 10px;" >Clear Tasks</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
+
