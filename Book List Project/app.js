@@ -13,7 +13,8 @@ UI.prototype.addBook = function(book){
             <td>${book.name}</td>
             <td>${book.author}</td>
             <td>${book.price}</td>
-        <tr>
+            <td><a href = "#"><i class="fas fa-minus-circle"></a></td>
+        </tr>
     `
 }
 
@@ -49,6 +50,14 @@ UI.prototype.validate = function(book){
         this.addBook(book)
     }
 }
+
+//Remove Book Item
+const table = document.getElementById('table');
+table.addEventListener('click',function(e){
+    if(e.target.className === "fas fa-minus-circle"){
+        e.target.parentElement.parentElement.parentElement.remove()
+    }
+})
 
 //Load Input and remove the class is-invalid if any on click
 const input_name = document.querySelector('#name');
