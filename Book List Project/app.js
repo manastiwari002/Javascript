@@ -47,8 +47,24 @@ UI.prototype.validate = function(book){
         inputPrice.classList.remove('is-invalid')
     }
     if(name.test(inputName.value)&&author.test(inputAuthor.value)&&price.test(inputPrice.value)){
+        //Alert
+        const div = document.createElement('div')
+
+        div.className = 'alert alert-success'
+
+        div.innerHTML = "Book Added !!"
+
+        const form = document.getElementById('form')
+        const container = document.querySelector('.container')
+
+        container.insertBefore(div,form)
+        setTimeout(function(){
+            document.querySelector('.alert').remove()
+        },2000)
+        
         this.addBook(book)
     }
+
 }
 
 //Remove Book Item
@@ -58,6 +74,7 @@ table.addEventListener('click',function(e){
         e.target.parentElement.parentElement.parentElement.remove()
     }
 })
+
 
 //Load Input and remove the class is-invalid if any on click
 const input_name = document.querySelector('#name');
